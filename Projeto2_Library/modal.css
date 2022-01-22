@@ -1,0 +1,122 @@
+
+/* -------------- MODAL CSS CODE ----------------*/
+.modal{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    transition: 400ms ease-in-out;
+    border:1px solid darkgray;
+    border-radius:10px;
+    z-index:10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    overflow:hidden;
+}
+.modal.active{
+    transform:translate(-50%,-50%) scale(1);
+}
+.modal-header{
+    display:flex;
+    padding:10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    background-color: rgb(245, 245, 245);
+    
+ 
+}
+.titulo_modal{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .btn-close{
+    cursor:pointer;
+    border:none;
+    outline:none;
+    background:none;
+    font-size: 1.00rem;
+    font-weight: bold;
+}
+.modal-body{
+    padding:10px 15px;
+}
+
+.modal-footer{
+    padding:10px 15px;
+    display:flex;
+    gap:10px;
+    justify-content: end;
+}
+#overlay{
+    position:fixed;
+    opacity:0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+#overlay.active{
+    opacity:1;
+    pointer-events: all;
+}
+
+.btn-close-modal{
+    background-color: gray;
+    color:white;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    padding:5px;
+    min-width:70px;
+}
+.btn-confirm-modal{
+    background-color: blue;
+    color:white;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    padding:5px;
+    min-width:70px;
+}
+
+.column{
+    display:flex;
+    flex-direction: column;
+}
+.form-control{
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px
+}
+.form-control::-webkit-inner-spin-button,.form-control::-webkit-outer-spin-button{
+ height: 30px;
+ width:20px
+}
+select.form-control{
+    width:100%;
+    min-height: 22px;
+}
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  border: none;
+  outline: 1px solid #ccc;
+}
+.titulos-modal{
+font-weight: 700;
+margin-bottom:2px
+}
+
